@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomiHive Elite Property Solutions Ltd - Master Business Model Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e1f42',
+                        accent: '#9f7539',
+                        accentlight: '#b58a4a',
+                        lightgray: '#f8fafc',
+                        graylight: '#e2e8f0',
+                        gray: '#64748b',
+                        darkgray: '#334155',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'pulse-gentle': 'pulseGentle 2s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        pulseGentle: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.8' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-header {
+            position: relative;
+        }
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #9f7539;
+        }
+        .logo-transition {
+            transition: opacity 0.5s ease-in-out;
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .table-row-hover:hover {
+            background-color: #f8fafc;
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-inter bg-lightgray text-darkgray">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-primary shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo Container with Switching Effect -->
+                <div class="flex items-center space-x-3">
+                    <div id="logo-container" class="relative w-48 h-12">
+                        <img id="main-logo" src="assets/domihive-logo.png" alt="DomiHive Logo" class="absolute top-0 left-0 w-full h-full object-contain logo-transition opacity-100">
+                        <img id="icon-logo" src="assets/domihive-lcon.png" alt="DomiHive Icon" class="absolute top-0 left-0 w-full h-full object-contain logo-transition opacity-0">
+                    </div>
+                    <span class="text-white font-semibold text-lg hidden md:inline">Elite Property Solutions Ltd</span>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#overview" class="text-graylight hover:text-accentlight transition-colors">Overview</a>
+                    <a href="#problem" class="text-graylight hover:text-accentlight transition-colors">Problem</a>
+                    <a href="#solution" class="text-graylight hover:text-accentlight transition-colors">Solution</a>
+                    <a href="#model" class="text-graylight hover:text-accentlight transition-colors">Model</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-primary to-darkgray text-white py-12 md:py-20">
+        <div class="container mx-auto px-4 animate-on-scroll" id="header-content">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-3xl md:text-5xl font-bold mb-6">
+                DOMIHIVE ELITE PROPERTY SOLUTIONS LTD
+                </h1>
+                <p class="text-xl md:text-2xl font-light mb-8 text-graylight">
+                    Master Business Model Document
+                </p>
+                <div class="inline-block px-6 py-3 bg-accent rounded-lg font-semibold hover-lift animate-pulse-gentle">
+                    A ProTech Company Redefining Renting & Buying in Nigeria
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Company Overview -->
+        <section id="overview" class="mb-16 animate-on-scroll">
+            <h2 class="text-3xl font-bold text-primary mb-8 section-header">1. COMPANY OVERVIEW</h2>
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 hover-lift">
+                <p class="text-lg mb-6">
+                    <span class="font-bold text-accent">DomiHive Elite Property Solutions Ltd</span> is a Nigerian ProTech (Property Technology) startup building a unified digital ecosystem for renting, buying, managing, and maintaining properties.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-lightgray p-6 rounded-lg">
+                        <h3 class="font-bold text-primary text-xl mb-4">Launch Strategy</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-accent mt-1 mr-3"></i>
+                                <span>Launching first in <span class="font-semibold">Lagos</span></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-expand-alt text-accent mt-1 mr-3"></i>
+                                <span>Scaling to Abuja, Ibadan, Delta State, Port Harcourt</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-globe text-accent mt-1 mr-3"></i>
+                                <span>Expanding across Nigeria and globally</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-lightgray p-6 rounded-lg">
+                        <h3 class="font-bold text-primary text-xl mb-4">Core Mission</h3>
+                        <div class="p-4 bg-primary text-white rounded-lg">
+                            <p class="font-semibold text-lg">
+                                To deliver a stress-free, agent-free, professional property experience for tenants, owners, and investors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-l-4 border-accent pl-6 bg-graylight/30 p-4 rounded-r-lg">
+                    <p class="text-lg">
+                        DomiHive is solving one of Nigeria's biggest urban problems: <span class="font-bold">the stressful, fraudulent, scattered, agent-dependent property experience.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section id="problem" class="mb-16 animate-on-scroll">
+            <h2 class="text-3xl font-bold text-primary mb-8 section-header">2. PROBLEM STATEMENT</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-10">
+                <!-- Tenants Problems -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary">Problems Tenants Face</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>High/hidden agent fees</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>Multiple agents for one property</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>Fake / unverified listings</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>Landlords not responding to maintenance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>Fraudulent payments</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Property Owners Problems -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-home text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary">Problems Property Owners Face</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>Difficulty finding trustworthy tenants</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>No time/experience to manage repairs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>Fear of bad tenants</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>Diaspora owners suffer from mismanagement</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>No transparent digital reporting</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Real Estate Sellers Problems -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-handshake text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary">Problems for Real Estate Sellers</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>Unqualified leads</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>Agents inflating prices</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>No standardized sales process</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>No digital buyer pipeline</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2 text-sm"></i>
+                            <span>No after-sale relationship</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- DomiHive's Solution -->
+        <section id="solution" class="mb-16 animate-on-scroll">
+            <h2 class="text-3xl font-bold text-primary mb-8 section-header">3. DOMIHIVE'S SOLUTION</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-10 hover-lift">
+                <p class="text-lg mb-8 text-center">
+                    A <span class="font-bold text-accent">ProTech digital platform</span> + <span class="font-bold text-accent">Full Property Management Company</span> offering:
+                </p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- For Tenants -->
+                    <div class="bg-gradient-to-b from-primary to-darkgray text-white rounded-lg p-6 transform transition-transform hover:scale-105">
+                        <div class="text-3xl mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">For Tenants</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-accentlight"></i>
+                                <span>Verified rental listings</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-accentlight"></i>
+                                <span>Zero agent fees</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-accentlight"></i>
+                                <span>Digital tenancy dashboard</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-accentlight"></i>
+                                <span>Maintenance request system</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- For Buyers -->
+                    <div class="bg-gradient-to-b from-accent to-accentlight text-white rounded-lg p-6 transform transition-transform hover:scale-105">
+                        <div class="text-3xl mb-4">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">For Buyers</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-primary"></i>
+                                <span>Verified homes for sale</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-primary"></i>
+                                <span>Professional property verification</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-primary"></i>
+                                <span>Digital viewing bookings</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-primary"></i>
+                                <span>Secure transaction guidance</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- For Landlords -->
+                    <div class="bg-gradient-to-b from-primary to-darkgray text-white rounded-lg p-6 transform transition-transform hover:scale-105">
+                        <div class="text-3xl mb-4">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">For Landlords</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-accentlight"></i>
+                                <span>Full management only (5+ years)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-accentlight"></i>
+                                <span>Entire tenant lifecycle</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-accentlight"></i>
+                                <span>Maintenance & rent collection</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-accentlight"></i>
+                                <span>Digital reporting</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- For Diaspora -->
+                    <div class="bg-gradient-to-b from-accent to-accentlight text-white rounded-lg p-6 transform transition-transform hover:scale-105">
+                        <div class="text-3xl mb-4">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">For Diaspora Owners</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-primary"></i>
+                                <span>Digital property monitoring</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-primary"></i>
+                                <span>Transparent reporting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-primary"></i>
+                                <span>Guaranteed management standards</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check mt-1 mr-2 text-primary"></i>
+                                <span>Remote landlord support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Journey Tables -->
+        <section class="mb-16 animate-on-scroll">
+            <h2 class="text-3xl font-bold text-primary mb-8 section-header">4. USER JOURNEY (Rent Sector)</h2>
+            
+            <div class="overflow-x-auto bg-white rounded-xl shadow-lg p-6 mb-10 hover-lift">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider">Step</th>
+                            <th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider">Process</th>
+                            <th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider">Actions</th>
+                            <th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider">Outcome</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr class="table-row-hover">
+                            <td class="px-6 py-4 whitespace-nowrap font-bold text-accent">1</td>
+                            <td class="px-6 py-4">Explore → View → Book</td>
+                            <td class="px-6 py-4">User browses properties, views details</td>
+                            <td class="px-6 py-4">Property selection</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="px-6 py-4 whitespace-nowrap font-bold text-accent">2</td>
+                            <td class="px-6 py-4">Sign-up → Dashboard</td>
+                            <td class="px-6 py-4">Sign-up, select goal (Rent/Buy/Shortlet/Commercial)</td>
+                            <td class="px-6 py-4">Default dashboard activation</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="px-6 py-4 whitespace-nowrap font-bold text-accent">3</td>
+                            <td class="px-6 py-4">Inspection Booking</td>
+                            <td class="px-6 py-4">Choose date, instant confirmation</td>
+                            <td class="px-6 py-4">DomiHive inspection team meets tenant</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="px-6 py-4 whitespace-nowrap font-bold text-accent">4</td>
+                            <td class="px-6 py-4">Application</td>
+                            <td class="px-6 py-4">Step 1: Application form<br>Step 2: Verification</td>
+                            <td class="px-6 py-4">Document collection during inspection</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="px-6 py-4 whitespace-nowrap font-bold text-accent">5</td>
+                            <td class="px-6 py-4">Payment</td>
+                            <td class="px-6 py-4">User pays rent</td>
+                            <td class="px-6 py-4">Confirmation received</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="px-6 py-4 whitespace-nowrap font-bold text-accent">6</td>
+                            <td class="px-6 py-4">Outcome</td>
+                            <td class="px-6 py-4">If Accepted: Move-in Details<br>If Rejected: Refund processed</td>
+                            <td class="px-6 py-4">Tenant onboarding or refund</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="px-6 py-4 whitespace-nowrap font-bold text-accent">7</td>
+                            <td class="px-6 py-4">Tenant Dashboard</td>
+                            <td class="px-6 py-4">My Properties, Maintenance Request, Chat Support, Payment History, etc.</td>
+                            <td class="px-6 py-4">Complete tenancy management</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Dashboard System -->
+        <section class="mb-16 animate-on-scroll">
+            <h2 class="text-3xl font-bold text-primary mb-8 section-header">6. DASHBOARD SYSTEM</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-10 hover-lift">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Default Dashboards</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center p-4 bg-green-50 rounded-lg border border-green-200">
+                                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-home text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-green-700">Rent</h4>
+                                    <p class="text-sm text-gray">Activated automatically after onboarding</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-200">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-search-dollar text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-700">Buy</h4>
+                                    <p class="text-sm text-gray">Active</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
+                                <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-bed text-gray-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-500">Shortlet</h4>
+                                    <p class="text-sm text-gray">Coming Soon – Locked</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
+                                <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-building text-gray-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-500">Commercial</h4>
+                                    <p class="text-sm text-gray">Coming Soon – Locked</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Unified Features</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-lightgray p-4 rounded-lg text-center">
+                                <i class="fas fa-bell text-accent text-2xl mb-2"></i>
+                                <p class="font-semibold">Notifications</p>
+                            </div>
+                            <div class="bg-lightgray p-4 rounded-lg text-center">
+                                <i class="fas fa-user-circle text-accent text-2xl mb-2"></i>
+                                <p class="font-semibold">Profile</p>
+                            </div>
+                            <div class="bg-lightgray p-4 rounded-lg text-center">
+                                <i class="fas fa-cog text-accent text-2xl mb-2"></i>
+                                <p class="font-semibold">Settings</p>
+                            </div>
+                            <div class="bg-lightgray p-4 rounded-lg text-center">
+                                <i class="fas fa-credit-card text-accent text-2xl mb-2"></i>
+                                <p class="font-semibold">Payments</p>
+                            </div>
+                            <div class="bg-lightgray p-4 rounded-lg text-center">
+                                <i class="fas fa-calendar-check text-accent text-2xl mb-2"></i>
+                                <p class="font-semibold">Bookings</p>
+                            </div>
+                            <div class="bg-lightgray p-4 rounded-lg text-center">
+                                <i class="fas fa-comments text-accent text-2xl mb-2"></i>
+                                <p class="font-semibold">Chat</p>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-gray italic">Each dashboard has its own sidebar functions but same account.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Model Canvas -->
+        <section id="model" class="mb-16 animate-on-scroll">
+            <h2 class="text-3xl font-bold text-primary mb-8 section-header">7. DOMIHIVE BUSINESS MODEL CANVAS</h2>
+            
+            <div class="overflow-x-auto bg-white rounded-xl shadow-lg p-6 mb-10 hover-lift">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider">Component</th>
+                            <th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider">Description</th>
+                            <th class="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr class="table-row-hover">
+                            <td class="px-6 py-4 font-bold text-primary">Customer Segments</td>
+                            <td class="px-6 py-4">Target user groups</td>
+                            <td class="px-6 py-4">
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Renters (low, mid, high income)</li>
+                                    <li>Property Buyers</li>
+                                    <li>Landlords (full management only)</li>
+                                    <li>Diaspora Investors</li>
+                                    <li>Real Estate Developers with many units</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="px-6 py-4 font-bold text-primary">Value Proposition</td>
+                            <td class="px-6 py-4">What we offer</td>
+                            <td class="px-6 py-4">
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Zero agent fees</li>
+                                    <li>Verified listings</li>
+                                    <li>Digital end-to-end experience</li>
+                                    <li>Professional management</li>
+                                    <li>Transparent maintenance</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="px-6 py-4 font-bold text-primary">Revenue Streams</td>
+                            <td class="px-6 py-4">Income sources</td>
+                            <td class="px-6 py-4">
+                                <ol class="list-decimal pl-5 space-y-1">
+                                    <li>Management Fees (%)</li>
+                                    <li>Markup on Rent (10%—20%)</li>
+                                    <li>Maintenance Service Fee</li>
+                                    <li>Property Sales Commission (10%–20%)</li>
+                                    <li>Tenant Subscription (future)</li>
+                                    <li>Upsell Services (future)</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="px-6 py-4 font-bold text-primary">Cost Structure</td>
+                            <td class="px-6 py-4">Major expenses</td>
+                            <td class="px-6 py-4">
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Tech development</li>
+                                    <li>Verification team</li>
+                                    <li>Media team</li>
+                                    <li>Inspection staff</li>
+                                    <li>Customer service</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="px-6 py-4 font-bold text-primary">Key Partners</td>
+                            <td class="px-6 py-4">Strategic alliances</td>
+                            <td class="px-6 py-4">
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Real estate lawyers</li>
+                                    <li>Developers</li>
+                                    <li>Evaluators</li>
+                                    <li>Maintenance contractors</li>
+                                    <li>Payment gateways</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Operational Structure -->
+        <section class="mb-16 animate-on-scroll">
+            <h2 class="text-3xl font-bold text-primary mb-8 section-header">11. OPERATIONAL STRUCTURE</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 hover-lift">
+                <h3 class="text-xl font-bold text-primary mb-6">A. Core Teams Needed</h3>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-lightgray p-5 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                <span class="font-bold text-purple-600">1</span>
+                            </div>
+                            <h4 class="font-bold">Media Team</h4>
+                        </div>
+                        <p class="text-sm text-gray">(photo/video)</p>
+                    </div>
+                    
+                    <div class="bg-lightgray p-5 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <span class="font-bold text-blue-600">2</span>
+                            </div>
+                            <h4 class="font-bold">Property Verification Team</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-lightgray p-5 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                <span class="font-bold text-green-600">3</span>
+                            </div>
+                            <h4 class="font-bold">Evaluation Team</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-lightgray p-5 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3">
+                                <span class="font-bold text-yellow-600">4</span>
+                            </div>
+                            <h4 class="font-bold">Inspection Staff</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-lightgray p-5 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                                <span class="font-bold text-red-600">5</span>
+                            </div>
+                            <h4 class="font-bold">Customer Service & Tenant Support</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-lightgray p-5 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                                <span class="font-bold text-indigo-600">10</span>
+                            </div>
+                            <h4 class="font-bold">Tech Team</h4>
+                        </div>
+                        <p class="text-sm text-gray">(Developers, UI/UX)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Entry Strategy -->
+        <section class="mb-16 animate-on-scroll">
+            <h2 class="text-3xl font-bold text-primary mb-8 section-header">14. MARKET ENTRY STRATEGY</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-10 hover-lift">
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-primary mb-4">How can a startup with NO MONEY, NO NETWORK, NO EXPERIENCE break into the real estate system?</h3>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="border-l-4 border-accent pl-6">
+                        <h4 class="text-lg font-bold text-primary mb-2">STEP 1 — Launch MVP + Build Credibility (Digital First)</h4>
+                        <p class="text-gray">People take tech companies serious when they see:</p>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                            <div class="bg-lightgray p-3 rounded text-center">
+                                <i class="fas fa-mobile-alt text-accent mb-2"></i>
+                                <p class="text-sm font-semibold">A clean app</p>
+                            </div>
+                            <div class="bg-lightgray p-3 rounded text-center">
+                                <i class="fas fa-laptop-code text-accent mb-2"></i>
+                                <p class="text-sm font-semibold">A functional website</p>
+                            </div>
+                            <div class="bg-lightgray p-3 rounded text-center">
+                                <i class="fas fa-palette text-accent mb-2"></i>
+                                <p class="text-sm font-semibold">Professional branding</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-4 border-primary pl-6">
+                        <h4 class="text-lg font-bold text-primary mb-2">STEP 2 — Find Our First 5–10 Landlord Partners Using SMART TARGETING</h4>
+                        <div class="grid md:grid-cols-3 gap-4 mt-4">
+                            <div class="bg-primary text-white p-4 rounded-lg">
+                                <h5 class="font-bold mb-2">A. Diaspora owners</h5>
+                                <p class="text-sm">They ALWAYS need management.</p>
+                            </div>
+                            <div class="bg-accent text-white p-4 rounded-lg">
+                                <h5 class="font-bold mb-2">B. Developers with many units</h5>
+                                <p class="text-sm">They care about tenant supply, management reliability, digital reporting.</p>
+                            </div>
+                            <div class="bg-darkgray text-white p-4 rounded-lg">
+                                <h5 class="font-bold mb-2">C. Busy professionals</h5>
+                                <p class="text-sm">They want stress-free management.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Steps 3-8 condensed -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-lightgray p-5 rounded-lg">
+                            <div class="text-2xl font-bold text-accent mb-2">STEP 3</div>
+                            <h5 class="font-bold text-primary mb-2">Create "Proof of Professionalism Pack"</h5>
+                            <p class="text-sm text-gray">Company profile, contracts, reporting samples</p>
+                        </div>
+                        
+                        <div class="bg-lightgray p-5 rounded-lg">
+                            <div class="text-2xl font-bold text-accent mb-2">STEP 4</div>
+                            <h5 class="font-bold text-primary mb-2">Use Acquisition Channels</h5>
+                            <p class="text-sm text-gray">Instagram ads, cold outreach, diaspora communities</p>
+                        </div>
+                        
+                        <div class="bg-lightgray p-5 rounded-lg">
+                            <div class="text-2xl font-bold text-accent mb-2">STEP 5</div>
+                            <h5 class="font-bold text-primary mb-2">Deliver Excellent Service</h5>
+                            <p class="text-sm text-gray">First 10 tenants become testimonials & referrals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="mb-16 animate-on-scroll">
+            <h2 class="text-3xl font-bold text-primary mb-8 section-header">19. CONCLUSION</h2>
+            
+            <div class="bg-gradient-to-r from-primary to-darkgray text-white rounded-xl shadow-lg p-8 text-center hover-lift">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-4xl mb-6">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <p class="text-2xl font-bold mb-6">
+                        DomiHive Elite Property Solutions Ltd is engineered to become:
+                    </p>
+                    <div class="bg-accent inline-block px-6 py-4 rounded-lg">
+                        <p class="text-xl font-bold">
+                            Nigeria's most trusted ProTech rental & property management ecosystem.
+                        </p>
+                    </div>
+                    <p class="mt-8 text-graylight">
+                        With a scalable model, multi-dashboard system, full management strategy, and structured market entry, DomiHive is positioned to dominate the rental & buy space before entering shortlet and commercial sectors.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div id="footer-logo" class="relative w-40 h-10 mb-4">
+                        <img id="footer-main-logo" src="assets/domihive-logo.png" alt="DomiHive Logo" class="absolute top-0 left-0 w-full h-full object-contain logo-transition opacity-100">
+                        <img id="footer-icon-logo" src="assets/domihive-lcon.png" alt="DomiHive Icon" class="absolute top-0 left-0 w-full h-full object-contain logo-transition opacity-0">
+                    </div>
+                    <p class="text-graylight">© 2023 DomiHive Elite Property Solutions Ltd</p>
+                    <p class="text-graylight text-sm">A ProTech Company Redefining Renting & Buying in Nigeria</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-graylight hover:text-accentlight transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-graylight hover:text-accentlight transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-graylight hover:text-accentlight transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-graylight hover:text-accentlight transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Logo switching animation
+        let isShowingLogo = true;
+        const mainLogo = document.getElementById('main-logo');
+        const iconLogo = document.getElementById('icon-logo');
+        const footerMainLogo = document.getElementById('footer-main-logo');
+        const footerIconLogo = document.getElementById('footer-icon-logo');
+        
+        function switchLogos() {
+            if (isShowingLogo) {
+                // Fade out logo, fade in icon
+                mainLogo.style.opacity = '0';
+                iconLogo.style.opacity = '1';
+                footerMainLogo.style.opacity = '0';
+                footerIconLogo.style.opacity = '1';
+            } else {
+                // Fade out icon, fade in logo
+                mainLogo.style.opacity = '1';
+                iconLogo.style.opacity = '0';
+                footerMainLogo.style.opacity = '1';
+                footerIconLogo.style.opacity = '0';
+            }
+            isShowingLogo = !isShowingLogo;
+        }
+        
+        // Switch logos every 5 seconds
+        setInterval(switchLogos, 5000);
+        
+        // Scroll animation for sections
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+        
+        function checkScroll() {
+            animateElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // Initial check
+        checkScroll();
+        
+        // Check on scroll
+        window.addEventListener('scroll', checkScroll);
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add animation to header on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const headerContent = document.getElementById('header-content');
+            headerContent.classList.add('visible');
+            
+            // Trigger initial animations
+            setTimeout(() => {
+                animateElements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('visible');
+                    }, index * 100);
+                });
+            }, 300);
+        });
+    </script>
+</body>
+</html>
